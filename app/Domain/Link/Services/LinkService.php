@@ -33,4 +33,12 @@ class LinkService
 
         return $shortCode;
     }
+    public function findLinkByShortCode(string $shortCode): ?Link
+    {
+        return $this->repository->findByShortCode($shortCode);
+    }
+    public function getAllLinks(): array
+    {
+        return $this->repository->getAll();
+    }
 }
